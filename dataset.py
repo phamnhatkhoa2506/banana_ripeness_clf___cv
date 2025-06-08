@@ -4,7 +4,6 @@ import torchvision.transforms as T
 from ultralytics.data.dataset import ClassificationDataset
 
 
-
 class CustomizedDataset(ClassificationDataset):
     def __init__(self, root: str, args, augment: bool = False, prefix: str = ""):
         super().__init__(root, args, augment, prefix)
@@ -28,9 +27,3 @@ class CustomizedDataset(ClassificationDataset):
             ]
         )
         self.torch_transforms = train_transforms if augment else val_transforms
-
-
-# from ultralytics import YOLO
-
-# model = YOLO("yolo11n-cls.pt")
-# model.train(data="imagenet1000", trainer=CustomizedTrainer, epochs=10, imgsz=224, batch=64)

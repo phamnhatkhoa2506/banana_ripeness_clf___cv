@@ -7,6 +7,6 @@ if __name__ == '__main__':
     load_dotenv()
 
     rf = Roboflow(api_key=os.environ.get("ROBOFLOW_API_KEY"))
-    project = rf.workspace("leo-ueno").project("people-detection-o4rdr")
+    project = rf.workspace("waaaaaaaa").project("banana-ripeness-classification-sf26k")
     version = project.version(1)
-    dataset = version.download("yolov11")
+    dataset = version.download("folder")
